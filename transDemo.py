@@ -108,7 +108,7 @@ class transprogram(QMainWindow, Ui_MainWindow):
     def old2new(self, old_path, new_path):
         old_file = open(old_path, 'r+', encoding='utf-8')
         new_file = open(new_path, 'w+', encoding='utf-8')
-        new_file.write('LD      LU      RD      RU      Ctrl    UDM\n')
+        new_file.write('LD       LU       RD       RU       Ctrl     UDM\n')
         while True:
             line_str = old_file.readline().strip()
             print('读取一行信息：', line_str)
