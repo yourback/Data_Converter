@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="trans">
+    <file>pic/logo.png</file>
+    <file>pic/titleicon.ico</file>
+  </qresource>
+</RCC>
