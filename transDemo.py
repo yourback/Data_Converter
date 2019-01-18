@@ -108,7 +108,7 @@ class transprogram(QMainWindow, Ui_MainWindow):
     def old2new(self, old_path, new_path):
         old_file = open(old_path, 'r+', encoding='utf-8')
         new_file = open(new_path, 'w+', encoding='utf-8')
-        new_file.write('LD       LU       RD       RU       Ctrl     UDM\n')
+        new_file.write('LD\tLU\tRD\tRU\tUDM\tCtrl\n')
         while True:
             line_str = old_file.readline().strip()
             print('读取一行信息：', line_str)
@@ -122,13 +122,18 @@ class transprogram(QMainWindow, Ui_MainWindow):
             if len(str) != 74:
                 # print('数据长度有误')
                 continue
-            LD = word_num(str[0:4], str[18:22]).__str__().ljust(7)
-            LU = word_num(str[4:8], str[22:26]).__str__().ljust(7)
-            RD = word_num(str[8:12], str[26:30]).__str__().ljust(7)
-            RU = word_num(str[12:16], str[30:34]).__str__().ljust(7)
-            E = byte_num(str[16:18], str[34:36]).__str__().ljust(7)
+            # LD = word_num(str[0:4], str[18:22]).__str__().ljust(7)
+            # LU = word_num(str[4:8], str[22:26]).__str__().ljust(7)
+            # RD = word_num(str[8:12], str[26:30]).__str__().ljust(7)
+            # RU = word_num(str[12:16], str[30:34]).__str__().ljust(7)
+            # E = byte_num(str[16:18], str[34:36]).__str__().ljust(7)
+            LD = word_num(str[0:4], str[18:22]).__str__()
+            LU = word_num(str[4:8], str[22:26]).__str__()
+            RD = word_num(str[8:12], str[26:30]).__str__()
+            RU = word_num(str[12:16], str[30:34]).__str__()
+            E = byte_num(str[16:18], str[34:36]).__str__()
             J = byte_num(str[-6:-4], '00')
-            new_file.write('%s  %s  %s  %s  %s  %s\n' % (LD, LU, RD, RU, E, J))
+            new_file.write('%s\t%s\t%s\t%s\t%s\t%s\n' % (LD, LU, RD, RU, E, J))
 
         old_file.close()
         new_file.close()
