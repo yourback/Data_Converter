@@ -459,7 +459,7 @@
         <item>
          <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>版本：alpha 1.0</string>
+           <string>版本：alpha 2.0</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

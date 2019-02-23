@@ -228,7 +228,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "正在转换："))
         self.btn_trans_begin.setText(_translate("MainWindow", "开始转换"))
         self.label_4.setText(_translate("MainWindow", "Design By SongYang"))
-        self.label_5.setText(_translate("MainWindow", "版本：alpha 1.0"))
+        self.label_5.setText(_translate("MainWindow", "版本：alpha 2.0"))
 
 from withclickedlineedit import WithClickedLineEdit
 import res_rc
