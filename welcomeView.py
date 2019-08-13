@@ -10,6 +10,7 @@ import res_rc
 class WelcomeWindow(QWidget):
     fade_over = pyqtSignal()
 
+
     def __init__(self, parent=None):
         super(WelcomeWindow, self).__init__(parent)
         self.initPix()
